@@ -1,0 +1,129 @@
+* {
+	font-size: 62.5%;
+	margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+	font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+}
+img{
+	vertical-align: top;
+	width: 100%;
+}
+.wrapper{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+h1{
+	font-size: 5rem;
+	text-align: center;
+	margin-bottom: 40px;
+}
+h2{
+	font-size: 1.6rem;
+	line-height: 1.6;
+	font-weight: normal;
+	margin-bottom: 30px;
+	text-align: center;
+}
+h3{
+	font-size: 2rem;
+}
+h4{
+	font-size: 3.6rem;
+	margin-bottom: 20px;
+}
+h5{
+	font-size: 1.5rem;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+h6{
+	font-size: 1.3rem;
+	font-weight: normal;
+	text-align: center;
+}
+.h7{
+	font-size: 1.6rem;
+	line-height: 1.6;
+	font-weight: normal;
+	text-align: center;
+}
+#mv{
+	margin-bottom: 100px;
+}
+.mv{
+	background: url(mv.jpg) no-repeat;
+    height: 700px;
+	width: 100%;
+	background-position: center;
+	background-size:cover
+}
+.appitem{
+	display: flex;
+	align-items: center;
+	justify-content:space-between;
+	margin-bottom: 30px;
+}
+.right{
+	width:45%;
+	max-width: 100%;
+}
+.right img{
+	width:100%;
+}
+.left{
+	width:45%;
+	max-width: 100%;
+}
+.left img{
+	width:100%;
+}
+.yellow{
+	font-size: 3.6rem;
+	background: #FDE12E;
+	padding: 5px;
+}
+
+#solution{
+	margin: 70px 0 100px;
+}
+#application{
+	margin: 70px 0 100px;
+}
+#application h2{
+	text-align: center;
+}
+
+#all{
+	margin: 70px 0 100px;
+}
+
+#problem{
+	margin: 70px 0 100px;
+}
+.problem-img{
+	max-width: 100%;
+}
+
+footer{
+	color: #fff;
+	text-align: center;
+	background: #000;
+	padding: 5px 0;
+}
+.element {
+	/* 最初は非表示 */
+	transform: translateY(40px);
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 1s, opacity 1s, visibility 1s;
+  }
+  /* フェードイン時に入るクラス */
+  .is-fadein {
+	transform: translateX(0);
+	opacity: 1;
+	visibility: visible;
+  }
