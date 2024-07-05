@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>鷹の台キャンパスの通学手段</title>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css?family=Hind:500&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function () {
+  $(window).scroll(function () {
+    const windowHeight = $(window).height();
+    const scroll = $(window).scrollTop();
+
+    $('.element').each(function () {
+      const targetPosition = $(this).offset().top;
+      if (scroll > targetPosition - windowHeight + 100) {
+        $(this).addClass("is-fadein");
+      }
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+    <section id="mv">
+        <div class="station_kokubunji">
+          <div class="title">
+            国分寺駅
+          </div>
+        </div>
+    </section>
+
+    <section id="problem">
+      <div class="wrapper">
+      <div class="station-about">
+        <div class="station-about-left">
+          <img src="img/kokubunji.svg" width="" alt="" />
+        </div>
+        <div class="station-about-right">
+          <h6>国分寺駅とは</h6>
+          <h5>国分寺駅（こくぶんじえき）は、東京都国分寺市にある、JR中央線、西武鉄道国分寺線・多摩湖線の駅。<br>
+            鷹の台キャンパスの最寄りの中で唯一JRが通る駅なので最も多くの人が利用する交通手段になるかと思います。<br>
+          </h5>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="application">
+      <div class="wrapper">
+        <div class="point-title">
+          <div class="point"><h1>おすすめポイント</h1></div>
+          <div class="min"><img src="img/min.svg" width="" alt="" /></div>
+        </div>
+        <div class="appitem">
+          <div class="left element">
+            <img src="img/kokubunji_1.jpg" width="" alt="" />
+          </div>
+          <div class="right">
+            <h3>01</h3>
+            <h4>CELEOがある</h4>
+            <h5>他で紹介している駅に比べ、かなり栄えています。ショッピングをする元気が残っていればなんでも揃うのでおすすめです。</h5>
+          </div>
+        </div>
+        <div class="appitem">
+          <div class="left">
+            <h3>02</h3>
+            <h4>JRも西武線も使える</h4>
+            <h5>他で紹介している駅は西武線ですが、国分寺駅駅はJRが通っているのでどなたも使いやすい駅かと思います。</h5>
+          </div>
+          <div class="right element">
+            <img src="img/kokubunji_2.jpg" width="" alt="" />
+          </div>
+        </div>
+        <div class="appitem">
+          <div class="left element">
+            <img src="img/kokubunji_3.jpg" width="" alt="" />
+          </div>
+          <div class="right">
+            <h3>03</h3>
+            <h4>バスからの眺めにエモさを感じる</h4>
+            <h5>近年韓国を中心に日本のどこか昭和っぽさを感じるエモさが注目されています。駅の近くではないバスの通る道だからこその郊外の雰囲気にエモさを感じます。乗車時間は25分と長いですが、1日中スクーリングで頑張った後に何も考えずに乗るバスはおすすめです。
+            </h5>
+          </div>
+        </div>
+        <div class="">
+        <div class="triangle-bottom"></div>
+      </div>
+        <div class="h7">
+          国分寺で夕飯を食べて少しショッピングして<br>
+          翌日のスクーリングを迎えるのがおすすめです！
+        </div>
+        <a href="index.html">
+          <div class="top">
+            TOP
+          </div>
+        </a>
+        </div>
+    </section>
+
+  <footer>© 2024 design2</footer>
+</body>
+</html>
+
+
+

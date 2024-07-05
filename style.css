@@ -29,43 +29,200 @@ h2{
 	text-align: center;
 }
 h3{
-	font-size: 2rem;
+	font-size: 1.6rem;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #FFE75A;
+	text-align:center;
+	line-height: 40px;
 }
 h4{
 	font-size: 3.6rem;
 	margin-bottom: 20px;
+	line-height: 1.4;
 }
 h5{
 	font-size: 1.5rem;
 	font-weight: normal;
 	margin-bottom: 10px;
+	line-height: 1.8;
 }
 h6{
-	font-size: 1.3rem;
-	font-weight: normal;
-	text-align: center;
+	font-size: 2.2rem;
+	margin-bottom: 5px;
 }
 .h7{
-	font-size: 1.6rem;
-	line-height: 1.6;
+	font-size: 1.5rem;
 	font-weight: normal;
 	text-align: center;
+	line-height: 1.8;
+	margin-top: 100px;
 }
 #mv{
 	margin-bottom: 100px;
+	background: #FFE75A;
 }
 .mv{
-	background: url(mv.jpg) no-repeat;
-    height: 700px;
-	width: 100%;
+    height: 550px;
+	max-width: 1000px;
+	margin: 0 auto;
 	background-position: center;
-	background-size:cover
+	background-size:cover;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.station-about{
+	display: flex;
+	align-items: center;
+    justify-content: space-between;
+	background: #fff4b5;
+	border-radius: 8px;
+}
+.station-about-left{
+	padding: 10px;
+	width: 20%;
+}
+.station-about-right{
+	padding: 10px 20px 10px 10px;
+	width: 80%;
+}
+.station_higashiyamatoshi{
+	background: url(higashiyamatoshi.jpg) no-repeat;
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+	position: relative;
+	z-index: 0;
+}
+.station_higashiyamatoshi::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	filter: brightness(60%);
+	/* 最背面へ */
+	z-index: -1;
+}
+.station_kokubunji{
+	background: url(kokubunji.jpg) no-repeat;
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+	position: relative;
+	z-index: 0;
+}
+.station_kokubunji::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	filter: brightness(60%);
+	/* 最背面へ */
+	z-index: -1;
+}
+.station_kodaira{
+	background: url(kodaira.jpg) no-repeat;
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+	position: relative;
+	z-index: 0;
+}
+.station_kodaira::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	filter: brightness(60%);
+	/* 最背面へ */
+	z-index: -1;
+}
+.station_takanodai{
+	background: url(takanodai.jpg) no-repeat;
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+	position: relative;
+	z-index: 0;
+}
+.station_takanodai::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	filter: brightness(60%);
+	/* 最背面へ */
+	z-index: -1;
+}
+.title{
+	color: #fff;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	font-size: 70px;
+	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+}
+.mv-left{
+	margin-right: 30px;
+}
+.point-title{
+	display: flex;
+	justify-content: center;
+}
+.min img{
+	width: 80px;
 }
 .appitem{
 	display: flex;
 	align-items: center;
 	justify-content:space-between;
 	margin-bottom: 30px;
+}
+.triangle-bottom {
+	position: relative;
+	padding-left: 20px;
+}
+.triangle-bottom:before {
+	content: '';
+	position: absolute;
+	top:20px;
+    left: 50%;
+	transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0;
+    border-color: #E47F10 transparent transparent;
+}
+.first{
+	display: flex;
+}
+.first-left{
+	width: 35%;
+}
+.first-right{
+	width: 65%;
+	padding-left: 40px;
+}
+.first-right h2{
+	text-align: left;
+}
+.test{
+	margin: 0 auto;
 }
 .right{
 	width:45%;
@@ -88,26 +245,66 @@ h6{
 }
 
 #solution{
-	margin: 70px 0 100px;
+	margin: 70px 0 160px;
 }
 #application{
-	margin: 70px 0 100px;
+	margin: 70px 0 160px;
 }
-#application h2{
-	text-align: center;
-}
-
-#all{
-	margin: 70px 0 100px;
-}
-
 #problem{
 	margin: 70px 0 100px;
 }
-.problem-img{
-	max-width: 100%;
+.area{
+	display: flex;
+	justify-content:space-between;
 }
-
+.area-block{
+	width: 24%;
+	position: relative;
+	z-index: 0;
+}
+.area-block::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #00000060;;
+	filter: brightness(60%);
+	/* 最背面へ */
+}
+.area-block:hover{
+	opacity: 0.85;
+}
+.area-title{
+	color: #fff;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+}
+small{
+	font-size: 15px;
+}
+.top{
+	margin: 0 auto;
+	font-size: 16px;
+	font-weight: bold;
+	background: #FDE12E;
+	text-align: center;
+	padding: 10px 20px;
+	width: 100px;
+	margin-top: 50px;
+	border-radius: 4px;
+}
+a{
+	color: #000;
+}
+.top:hover{
+	background: #edd223;
+}
 footer{
 	color: #fff;
 	text-align: center;
