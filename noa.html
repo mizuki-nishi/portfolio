@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mizuki Nishi Portfolio</title>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Hind:500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon.png">
+<script src="/complete.php"></script>
+<script src="/confirm.php"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#contact").validate({});
+});
+</script>
+   <script>
+	jQuery(function($) {
+    $('a[href^="#"]').SmoothScroll({
+        duration : 500,
+        easing : 'linear'
+    });
+});
+
+jQuery(function($){
+	//スマートフォン用メニューの開閉
+	$('p.menubtn').click(function(){
+		$('p.menubtn span').toggleClass('toggle');
+		$('.header ul.mainmenu').toggleClass('toggle');
+    });
+	//スマートフォン用メニューの開閉
+	$('.header ul.mainmenu li a').click(function(){
+        $('p.menubtn span').removeClass('toggle');
+		$('.header ul.mainmenu').removeClass('toggle');
+    });
+
+});
+	</script>
+    <script>
+      $(function () {
+      
+        // モーダルのボタンをクリックした時
+        $('.modal_trigger .modal_btn').on('click', function() {
+          var btnIndex = $(this).index(); // 何番目のモーダルボタンかを取得
+          $('.modal_area .modal_box').eq(btnIndex).fadeIn(); // クリックしたモーダルボタンと同じ番目のモーダルを表示する
+        });
+      
+        // ×やモーダルの背景をクリックした時
+        $('.modal_close , .modal_bg').click(function(){
+          $('.modal_box').fadeOut(); // モーダルを非表示にする
+        });
+      });
+      
+    </script>
+
+</head>
+
+<body>
+<header>
+  <nav id="global-nav" class="header">
+  <p class="menubtn"><img src="images/menubtn.png" width="30" height="30" alt="メニューアイコン"/></p>
+  <ul class="mainmenu">
+    <li><a href="index.html#top">top</a></li>
+    <li><a href="index.html#about">about</a></li>
+    <li><a href="index.html#skill">skill</a></li>
+    <li><a href="index.html#web-design">web design</a></li>
+    <li><a href="index.html#graphic-design">graphic design</a></li>
+    <li><a href="index.html#banner">banner</a></li>
+</ul>
+  </nav>
+</header>
+
+<main>
+ 
+   <section id="design-about">
+    <div id="contents"> 
+     <h5 class="site-design">ノア・テクニカ名刺</h5>
+
+      <h4 class="screenshot"><img src="images/noa.png" alt="名刺"></a></h4>
+
+      <div class="design-text">
+
+    <div class="headline">目的・課題</div>
+    <div class="detail-text">
+      <ul class="list">
+        <li>サイト制作の受注の際に名刺を新規作成することになった為対応。</li>
+        <li>特に要望はなかった為、ロゴを基に複数案提案した。</li>
+    </ul>
+   </div>
+   <div class="headline">ターゲット層</div>
+   <div class="detail-text">
+    <ul class="list">
+      <li>社長も社員も共通とのことだったので、ターゲットの年齢を定めるより企業のイメージが伝わるものにする。</li>
+    </ul>
+  </div>
+   <div class="headline">制作について</div>
+   <div class="detail-text">
+    作業時間：1日でデザイン、用紙の提案や費用についてまとめた。（2025年7月）
+      </div>
+    <div class="headline">デザインについて</div>
+    <div class="detail-text">
+      <ul class="list">
+     <li>企業ロゴの赤、黄、青を活かした明るい印象で作成。</li>
+     <li>原色を多く使用することを好まない可能性もある為、控えめにした案なども作成。</li>
+    </ul>
+     </div>
+
+     <div class="headline">使用ツール・言語</div>
+     <div class="detail-text">
+      Illustrator
+    </div>
+
+    </div>
+    </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      
+</main>
+    <footer>Mizuki Nishi Portfolio. All Rights Reserved</footer>
+
+</body>
+</html>

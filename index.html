@@ -2,120 +2,540 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>鷹の台キャンパスの通学手段</title>
+<title>Mizuki Nishi Portfolio</title>
 <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
-<link href="style.css" rel="stylesheet" type="text/css">
-<link rel="icon" href="favicon.svg">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Hind:500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon.png">
+<script src="/complete.php"></script>
+<script src="/confirm.php"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-$(function () {
-  $(window).scroll(function () {
-    const windowHeight = $(window).height();
-    const scroll = $(window).scrollTop();
-
-    $('.element').each(function () {
-      const targetPosition = $(this).offset().top;
-      if (scroll > targetPosition - windowHeight + 100) {
-        $(this).addClass("is-fadein");
-      }
-    });
-  });
+$(document).ready(function() {
+    $("#contact").validate({});
 });
 </script>
+   <script>
+	jQuery(function($) {
+    $('a[href^="#"]').SmoothScroll({
+        duration : 500,
+        easing : 'linear'
+    });
+});
+
+jQuery(function($){
+	//スマートフォン用メニューの開閉
+	$('p.menubtn').click(function(){
+		$('p.menubtn span').toggleClass('toggle');
+		$('.header ul.mainmenu').toggleClass('toggle');
+    });
+	//スマートフォン用メニューの開閉
+	$('.header ul.mainmenu li a').click(function(){
+        $('p.menubtn span').removeClass('toggle');
+		$('.header ul.mainmenu').removeClass('toggle');
+    });
+
+});
+	</script>
+    <script>
+      $(function () {
+      
+        // モーダルのボタンをクリックした時
+        $('.modal_trigger .modal_btn').on('click', function() {
+          var btnIndex = $('.modal_trigger .modal_btn').index(this); // 何番目のモーダルボタンかを取得
+          $('.modal_area .modal_box').eq(btnIndex).fadeIn(); // クリックしたモーダルボタンと同じ番目のモーダルを表示する
+        });
+      
+        // ×やモーダルの背景をクリックした時
+        $('.modal_close , .modal_bg').click(function(){
+          $('.modal_box').fadeOut(); // モーダルを非表示にする
+        });
+      });
+      
+    </script>
+
 </head>
 
 <body>
-    <section id="mv">
-        <div class="mv">
-          <div class="mv-left">
-            <img src="img/mv-left.png" width="" alt="" />
-          </div>
-          <div class="mv-right">
-            <img src="img/mv-right.png" width="" alt="" />
-          </div>
+<header>
+  <nav id="global-nav" class="header">
+  <p class="menubtn"><img src="images/menubtn.png" width="30" height="30" alt="メニューアイコン"/></p>
+    <ul class="mainmenu">
+      <li><a href="#top-main">top</a></li>
+      <li><a href="#about">about</a></li>
+      <li><a href="#skill">skill</a></li>
+      <li><a href="#web-design">web design</a></li>
+      <li><a href="#graphic-design">graphic design</a></li>
+      <li><a href="#banner">banner</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="top-main">
+    <div class="top-contents">
+      <div class="top-contents-text">   
+   <h1>MIZUKI<br>NISHI</h1><h7>PORTFOLIO</h7>
+  </div>
+  <div class="me"><img src="images/me.png"></div>
+  <div class="star-1"><img src="images/star.png"></div>
+  <div class="star-2"><img src="images/star.png"></div>
+  <div class="star-3"><img src="images/star.png"></div>
+  <div class="star-4"><img src="images/star.png"></div>
+  <div class="star-5"><img src="images/star.png"></div>
+  </div>
+   </section>
+ 
+  <section id="about">
+  <div id="contents"> 
+        <div class="wrapper">
+            <h3 class="about">about</h3>
+            <h6>西みずきの職歴等プロフィール</h6>
+            <dl class="career-flex">
+                <dt class="career-flexInner-left">
+                <span class="Year">1993年
+                <span class="term">(1993.8)</span></span>
+                </dt>
+                <dd class="career-flexInner-right"><span class="career-bold">横浜に生まれる</span>
+                </dd>
+            </dl>
+            <dl class="career-flex">
+                <dt class="career-flexInner-left">
+                <span class="Year">2012年
+                <span class="term">(2012.4〜2014.3)</span></span>
+                </dt>
+                <dd class="career-flexInner-right"><span class="career-bold">文化服装学院スタイリストコース入学</span>
+                <p class="text">被服製作、ファッションショー、コーディネート論などを学ぶ</p>
+                </dd>
+            </dl>
+            <dl class="career-flex">
+                <dt class="career-flexInner-left">
+                <span class="Year">2014年
+                <span class="term">(2014.4〜2015.3)</span></span>
+                </dt>
+                <dd class="career-flexInner-right"><span class="career-bold">スタイリストアシスタントになる</span>
+                <p class="text">ドラマ、バラエティ番組等TV関係の衣装の借り出し、返却、撮影に携わる</p>
+                </dd>
+            </dl>
+            <dl class="career-flex">
+                <dt class="career-flexInner-left">
+                <span class="Year">2015年
+                <span class="term">(2015.4〜2016.10)</span></span>
+                </dt>
+                <dd class="career-flexInner-right"><span class="career-bold">一般事務に転職</span>
+                <p class="text">来客対応、電話対応、種類作成等、WordやExcel、PowerPointを使用した業務をする
+                </p>
+                </dd>
+            </dl>
+            <dl class="career-flex">
+                <dt class="career-flexInner-left">
+                <span class="Year">2017年
+                <span class="term">(2017.1〜2017.8)</span></span>
+                </dt>
+                <dd class="career-flexInner-right"><span class="career-bold">東京デザインプレックスに入学</span>
+                <p class="text">DTPデザインコース(Illustrater, Photoshop, Indesign)<br>コーディングコース(HTML5, CSS3, jQuery)
+                </p>
+                </dd>
+                </dl>
+                <dl class="career-flex">
+                <dt class="career-flexInner-left">
+                <span class="Year">2017年
+                <span class="term">(2017.12〜2020.3)</span></span></dt>
+                <dd class="career-flexInner-right"><span class="career-bold">Webコーダー、オペレーターと並行しインターンとしてWebデザイナーをする</span>
+                <p class="text">平日は<a href= "https://www.sonynetwork.co.jp/" target="_blank">ソニーネットワークコミュニケーションズ株式会社</a>の派遣社員として、Webコーダー、Webオペレーターをする。休日は<a href= "https://alfree.net/" target="_blank"></a>株式会社Alfree</a>のインターンとしてWebデザイナーをする。
+                </p>
+                </dd>
+            </dl>
+            <dl class="career-flex">
+              <dt class="career-flexInner-left">
+              <span class="Year">2020年
+              <span class="term">(2020.4〜2022.7)</span></span></dt>
+              <dd class="career-flexInner-right"><span class="career-bold">美容・医療関係のインハウスのWebデザイナー</span>
+              <p class="text"><a href= "https://rtg-agent.co.jp/" target="_blank">サイトカイン株式会社</a>の正社員としてWebデザイナーの仕事をする。
+              <br>
+              <a href= "https://www.theclinic.jp/" target="_blank">THE CLINIC</a>、<a href= "https://www.knee-joint.net/" target="_blank">ひざ関節症クリニック</a>、<a href= "https://www.clinicare.co.jp/" target="_blank">CLINICARE</a>、<a href= "https://www.azacli.com/" target="_blank">AZACLI</a>と提携していて、新規サイトの作成、Googleアナリティクス•Tableauの分析に基づく既存サイトの改善、SNS用の画像の作成、SNSマーケティングを行う。  
+              </p>
+              </dd>
+          </dl>
+          <dl class="career-flex">
+            <dt class="career-flexInner-left">
+            <span class="Year">2022年
+            <span class="term">(2022.11〜現在)</span></span></dt>
+            <dd class="career-flexInner-right"><span class="career-bold">広告代理店のWebデザイナー</span>
+            <p class="text"><a href= "https://www.cytokine.jp/" target="_blank">R-TGエージェント</a>の正社員としてWebデザイナーの仕事をする。
+            <br>
+            APA HOTEL、ひまわり生命、朝日生命など大手企業のサイト制作、広告バナー、SNS画像の作成などを作成。その他中小企業の採用支援としてMetaでの広告配信バナー、サイトの作成を行う。
+            </p>
+            </dd>
+            </dl>
+            <dl class="career-flex">
+              <dt class="career-flexInner-left">
+              <span class="Year">2023年
+              <span class="term">(2023.4〜2025.3)</span></span></dt>
+              <dd class="career-flexInner-right"><span class="career-bold">武蔵野美術大学通信過程デザイン総合コース編入学</span>
+              <p class="text">3年次編入学し、仕事と並行しながら休日は登校するなどして美術、デザインを学びました。
+              </p>
+              </dd>
+              </dl>
+            </div>
         </div>
     </section>
 
-    <section id="problem">
-      <div class="wrapper">
-      <h1>はじめに</h1>
-      <div class="first">
-      <div class="first-left">
-        <img src="img/map.svg" width="" alt="" />
-      </div>
-      <div class="first-right">
-        <h2>スクーリングが鷹の台キャンパスだと授業の内容は楽しくても通いづらくて気が重い人も多いと思います。<br>
-          ですが、交通手段を変えてみると訪れた事のない駅、道に触れて新鮮な気持ちになったので他の方にも味わってほしいと思いました。<br>
-          私どの方にも行ってほしいですが、私のように30歳前後で都内で一人暮らしをしていて日々仕事と通信課題に追われて出かける機会や友人に会う機会が減っている方には知ってほしいです。<br>
-          そしていつか振り返った時に、校舎だけでなく、鷹の台エリアも思い出して、あの頃ムサビ通信に通っていたな、楽しかった、仕事との両立きついけど頑張ってたなと思い返してもらえたら嬉しいです。
-        </h2>
-      </div>
-      </div>
-      </div>
-    </section>
+    <section id="skill">
+      <h3 class="skills">skill</h3>
+      <h6>使用可能ツールと歴</h6>
+          <div class="float-1">
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-illustrator.svg" alt="illustrator"></div>
+                  <h8>Illustrator<br><span style = "color:#e0aa00;">★★★★★</span><br>8年</h8>
+                  <p>紙のデザイン、イラストなど素材作成に使用。イラストを描くことも得意です。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-photoshop.svg" alt="photoshop"></div>
+                  <h8>Photoshop<br><span style = "color:#e0aa00;">★★★★★</span><br>8年</h8>
+                  <p>webサイトの制作、写真のレタッチ等画像の加工に使用。実務としても問題なく使用出来ます。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-xd.svg" alt="xd"></div>
+                  <h8>XD<br><span style = "color:#e0aa00;">★★★★☆</span><br>5年</h8>
+                  <p>webサイトのカンプ作成・実制作の際に使用。本で学習してから実務を行っている為基礎が出来ています。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-indesign.svg" alt="indesign"></div>
+                  <h8>InDesign<br><span style = "color:#e0aa00;">★★☆☆☆</span><br>〜1年</h8>
+                  <p>学習はしましたが、実務で使用する機会がなかった為、基礎的な内容を理解しているレベルです。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-premiere.svg" alt="premiere"></div>
+                  <h8>Premiere<br><span style = "color:#e0aa00;">★★☆☆☆</span><br>〜1年</h8>
+                  <p>YouTube動画のような基本的な動画作成は可能ですが、品質の高い動画の場合は時間がかかります。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-dimention.svg" alt="dimention"></div>
+                  <h8>Dimension<br><span style = "color:#e0aa00;">★★☆☆☆</span><br>〜1年</h8>
+                  <p>サイトカイン株式会社入職時にボディローション、クリームの商材を扱った際の商品3Dイメージを作成いたしました。</p>
+            </div>
 
-    <section id="solution">
-      <div class="wrapper">
-      <h1>紹介したい通学手段</h1>
-      <h2>
-        さっそくですが、4つの通学手段を紹介します。<br>
-        是非制覇してくださいね！
-      </h2>
-      <div class="area element">
-        <div class="area-block">
-          <a href="higashiyamatoshi.html">
-          <div class="area-title">
-            <small>西武拝島線</small><br>
-            東大和市駅
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-figma.svg" alt="figma"></div>
+                  <h8>figma<br><span style = "color:#e0aa00;">★★★☆☆</span><br>1年</h8>
+                  <p>webサイトの制作の際に使用。提案をまとめる際はfigjamを活用をしていました。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-html5.svg" alt="html5"></div>
+                  <h8>HTML5<br><span style = "color:#e0aa00;">★★★☆☆</span><br>8年</h8>
+                  <p>LP、サイト制作時はコーディングまでデザイナーが行っている為、実務としても問題なく使用出来ます。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-css3.svg" alt="css3"></div>
+                  <h8>CSS3<br><span style = "color:#e0aa00;">★★★☆☆</span><br>5年</h8>
+                  <p>LP、サイト制作時はコーディングまでデザイナーが行っている為、実務としても問題なく使用出来ます。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon"><img src="images/icon-Javascript.svg" alt="Javascript"></div>
+                  <h8>JavaScript<br><span style = "color:#e0aa00;">★★☆☆☆</span><br>2年</h8>
+                  <p>LP、サイト制作時はコーディングまでデザイナーが行っている為、実務としても問題なく使用出来ます。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon-l" style="padding:12px 0;"><img src="images/icon-wordpress.svg" alt="wordpress"></div>
+                  <h8>WordPress<br><span style = "color:#e0aa00;">★★★☆☆</span><br>2年</h8>
+                  <p>調べながらになる部分もありますが構築できます。</p>
+            </div>
+            <div class="skill">
+              <div class="skill-icon-l" style="padding:18px 0;"><img src="images/icon-php.svg" alt="php"></div>
+                  <h8>PHP<br><span style = "color:#e0aa00;">★★☆☆☆</span><br>1年</h8>
+                  <p>WordPressでサイトを制作する際、サイト制作でお問い合わせフォームを制作する際に使用しています。</p>
+            </div>             
+            </div>
+          </section>
+
+    <section id="web-design">
+		<h3 class="web-design">Web</h3>
+    <h6>制作したwebサイト</h6>
+    <div class="modal_trigger">
+          <div class="item">
+            <h2>スキマバイトLP</h2>
+                <a href="timee.html"><img class="image opacity" src="images/timee_top.png" alt="TimeeLP"></a>
+                <p>スキマバイトのTimeeの企業向けLPを作成</p>
           </div>
-          <div class="area-img">
-            <img src="img/higashiyamatoshi.jpg" width="" alt="" />
+          <div class="item">
+            <h2>テレビ番組制作会社求人LP</h2>
+            <a href="its.html"><img class="image opacity" src="images/its_top.png" alt="フォーミュレーションLP"></a>
+            <p>テレビ番組の制作を手掛けるフォーミュレーションI.T.Sの求人募集LPを作成</p>
+                </div>
+          <div class="item">
+            <h2>生命保険LP</h2>
+                <a href="himawari.html"><img class="image opacity" src="images/himawari_top.jpg" alt="ひまわり生命LP"></a>
+                <p>ひまわり生命の生命保険のLPを作成</p>
           </div>
-        </a>
+          </div>
+    	</section>
+
+      <section id="graphic-design">
+        <h3 class="graphic-design">graphic</h3>
+        <h6>制作した紙媒体</h6>
+        <div class="modal_trigger">
+          <div class="item">
+                <h2>蓄電池パンフレット</h2>
+                    <a href="volt.html"><img class="image opacity" src="images/volt_top.jpg" alt="ひざ関節症クリニックのリハビリ手帳"></a>
+                    <p>株式会社VOLTのパンフレットを作成</p>
+              </div>
+              <div class="item">
+                <h2>名刺</h2>
+                <a href="noa.html"><img class="image opacity" src="images/noa_top.png" alt="ひざ関節症クリニックの地図"></a>
+                <p>電気事業の株式会社ノア・テクニカの名刺を作成</p>
+              </div>
+              <div class="item">
+                <h2>SKYロゴ</h2>
+                    <a href="sky.html"><img class="image opacity" src="images/sky_top.png" alt="ひざ関節症クリニックのチラシ"></a>
+                    <p>再生医療事業プロジェクトのロゴを作成</p>
+              </div>
+              </div>
+          </section>
+
+	<section id="banner">
+		<h3 class="banner">recruitment banner</h3>
+        <h6>採用支援バナー</h6>
+        <div class="modal_trigger">
+	    		<div class="modal_btn">
+            <img class="image" src="images/hrtg_1.jpg" alt="採用支援バナー">
+          </div>
+	    		<div class="modal_btn">
+            <img class="image" src="images/hrtg_2.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_3.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_4.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_5.jpg" alt="採用支援バナー">
+          </div>
+	    		<div class="modal_btn">
+            <img class="image" src="images/hrtg_6.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_7.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_8.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_9.jpg" alt="採用支援バナー">
+          </div>
+	    		<div class="modal_btn">
+            <img class="image" src="images/hrtg_10.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_11.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_12.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_13.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_14.jpg" alt="採用支援バナー">z
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_15.jpg" alt="採用支援バナー">
+          </div>
+	    		<div class="modal_btn">
+            <img class="image" src="images/hrtg_16.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_17.jpg" alt="採用支援バナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/hrtg_18.jpg" alt="採用支援バナー">
+          </div>
         </div>
+	</section>
 
-        <div class="area-block">
-          <a href="takanodai.html">
-          <div class="area-title">
-            <small>西武国分寺線</small><br>
-            鷹の台駅
+	<section id="asahi-banner">
+		<h3 class="banner">Asahi banner & SNS</h3>
+        <h6>朝日生命バナー、SNS画像</h6>
+        <div class="modal_trigger">
+	    		<div class="modal_btn">
+            <img class="image" src="images/asahi_1.jpg" alt="朝日生命のバナー">
           </div>
-          <div class="area-img">
-            <img src="img/takanodai.jpg" width="" alt="" />
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_2.jpg" alt="朝日生命のバナー">
           </div>
-        </a>
+	    		<div class="modal_btn">
+            <img class="image" src="images/asahi_3.jpg" alt="朝日生命のバナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_4.png" alt="朝日生命のバナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_5.png" alt="朝日生命のバナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_6.jpg" alt="朝日生命のバナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_7.jpg" alt="朝日生命のバナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_8.jpg" alt="朝日生命のバナー">
+          </div>
+	    		<div class="modal_btn">
+            <img class="image" src="images/asahi_9.jpg" alt="朝日生命のバナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_10.jpg" alt="朝日生命のバナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_11.jpg" alt="朝日生命のバナー">
+          </div>
+          <div class="modal_btn">
+            <img class="image" src="images/asahi_12.jpg" alt="朝日生命のバナー">
+          </div>       
+        </div>         
+	</section>
+
+	<section id="apa-banner">
+		<h3 class="banner">APA Group SNS</h3>
+        <h6>APA Group SNS画像</h6>
+        <div class="modal_trigger">
+	    		<div class="modal_btn">
+            <h2>APA HOTEL</h2>
+            <img class="image" src="images/hotel_1.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL</h2>
+            <img class="image" src="images/hotel_2.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL</h2>
+            <img class="image" src="images/hotel_3.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL</h2>
+            <img class="image" src="images/hotel_4.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL</h2>
+            <img class="image" src="images/hotel_5.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL</h2>
+            <img class="image" src="images/hotel_6.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL</h2>
+            <img class="image" src="images/hotel_7.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_1.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_2.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_3.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_4.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_5.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_6.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_7.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_8.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_9.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_10.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_11.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_12.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_13.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOME</h2>
+            <img class="image" src="images/home_14.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL梅田 Bar</h2>
+            <img class="image" src="images/bar_1.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL梅田 Bar</h2>
+            <img class="image" src="images/bar_2.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL梅田 Bar</h2>
+            <img class="image" src="images/bar_3.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL梅田 Bar</h2>
+            <img class="image" src="images/bar_4.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL梅田 Bar</h2>
+            <img class="image" src="images/bar_5.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL梅田 Bar</h2>
+            <img class="image" src="images/bar_6.jpg" alt="APA画像">
+          </div>
+          <div class="modal_btn">
+            <h2>APA HOTEL金沢 金沢彩旬</h2>
+            <img class="image" src="images/bar_7.jpg" alt="APA画像">
+          </div>
         </div>
+             
 
-        <div class="area-block">
-          <a href="kodaira.html">
-          <div class="area-title">
-            <small>西武新宿線・拝島線</small><br>
-            小平駅
-          </div>
-          <div class="area-img">
-            <img src="img/kodaira.jpg" width="" alt="" />
-          </div>
-        </a>
-        </div>
+	</section>
 
-        <div class="area-block">
-          <a href="kokubunji.html">
-          <div class="area-title">
-            <small>JR中央線、西武国分寺・多摩湖線</small><br>
-            国分寺駅
-          </div>
-          <div class="area-img">
-            <img src="img/kokubunji.jpg" width="" alt="" />
-          </div>
-        </a>
-        </div>
-      </div>
-      </div>
-    </section>
+    </main>
+<footer>Mizuki Nishi Portfolio. All Rights Reserved</footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+            ScrollReveal({ reset: true });
+            ScrollReveal().reveal(".star-1 ,.star-3 ,.star-5 ", { delay: 100,origin:"left" });
+            ScrollReveal().reveal(".star-2 ,.star-4 ", { delay: 500,origin:"left" });
 
+            ScrollReveal({ reset: false });
+            ScrollReveal().reveal(".skill", { delay: 200,origin:"left" });
+            ScrollReveal().reveal(".item", { delay: 200,origin:"left" });
+            ScrollReveal().reveal(".modal_btn", { delay: 200,origin:"left" });
+            
+</script>
 
-  <footer>Copyright©ds233141_mizuki_nishi</footer>
 </body>
 </html>
-
