@@ -41,23 +41,6 @@ jQuery(function($){
 
 });
 	</script>
-    <script>
-      $(function () {
-      
-        // モーダルのボタンをクリックした時
-        $('.modal_trigger .modal_btn').on('click', function() {
-          var btnIndex = $('.modal_trigger .modal_btn').index(this); // 何番目のモーダルボタンかを取得
-          $('.modal_area .modal_box').eq(btnIndex).fadeIn(); // クリックしたモーダルボタンと同じ番目のモーダルを表示する
-        });
-      
-        // ×やモーダルの背景をクリックした時
-        $('.modal_close , .modal_bg').click(function(){
-          $('.modal_box').fadeOut(); // モーダルを非表示にする
-        });
-      });
-      
-    </script>
-
 </head>
 
 <body>
@@ -71,6 +54,7 @@ jQuery(function($){
       <li><a href="#web-design">web design</a></li>
       <li><a href="#graphic-design">graphic design</a></li>
       <li><a href="#banner">banner</a></li>
+      <li><a href="#musabi">musabi</a></li>
     </ul>
   </nav>
 </header>
@@ -297,66 +281,36 @@ jQuery(function($){
               </div>
           </section>
 
-	<section id="banner">
-		<h3 class="banner">recruitment banner</h3>
-        <h6>採用支援バナー</h6>
-        <div class="modal_trigger">
-	    		<div class="modal_btn">
-            <img class="image" src="images/hrtg_1.jpg" alt="採用支援バナー">
-          </div>
-	    		<div class="modal_btn">
-            <img class="image" src="images/hrtg_2.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_3.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_4.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_5.jpg" alt="採用支援バナー">
-          </div>
-	    		<div class="modal_btn">
-            <img class="image" src="images/hrtg_6.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_7.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_8.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_9.jpg" alt="採用支援バナー">
-          </div>
-	    		<div class="modal_btn">
-            <img class="image" src="images/hrtg_10.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_11.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_12.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_13.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_14.jpg" alt="採用支援バナー">z
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_15.jpg" alt="採用支援バナー">
-          </div>
-	    		<div class="modal_btn">
-            <img class="image" src="images/hrtg_16.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_17.jpg" alt="採用支援バナー">
-          </div>
-          <div class="modal_btn">
-            <img class="image" src="images/hrtg_18.jpg" alt="採用支援バナー">
-          </div>
-        </div>
-	</section>
+          <section id="banner">
+            <h3 class="banner">recruitment banner</h3>
+            <h6>採用支援バナー</h6>
+          
+            <div class="modal_trigger">
+              <div class="modal_btn"><img class="image" src="images/hrtg_1.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_2.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_3.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_4.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_5.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_6.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_7.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_8.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_9.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_10.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_11.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_12.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_13.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_14.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_15.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_16.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_17.jpg" alt="採用支援バナー"></div>
+              <div class="modal_btn"><img class="image" src="images/hrtg_18.jpg" alt="採用支援バナー"></div>
+            </div>
+          <!--
+            <div class="more">
+              <button>もっと見る</button>
+            </div>
+          -->
+          </section>         
 
 	<section id="asahi-banner">
 		<h3 class="banner">Asahi banner & SNS</h3>
@@ -493,10 +447,12 @@ jQuery(function($){
             <h2>APA HOTEL梅田 Bar</h2>
             <img class="image" src="images/bar_1.jpg" alt="APA画像">
           </div>
+          <!--
           <div class="modal_btn">
             <h2>APA HOTEL梅田 Bar</h2>
             <img class="image" src="images/bar_2.jpg" alt="APA画像">
           </div>
+          -->
           <div class="modal_btn">
             <h2>APA HOTEL梅田 Bar</h2>
             <img class="image" src="images/bar_3.jpg" alt="APA画像">
@@ -518,9 +474,29 @@ jQuery(function($){
             <img class="image" src="images/bar_7.jpg" alt="APA画像">
           </div>
         </div>
-             
-
 	</section>
+
+  <section id="musabi">
+		<h3 class="musabi">musabi</h3>
+    <h6>武蔵野美術大学の通信での制作物</h6>
+    <div class="modal_trigger">
+          <div class="item">
+            <h2>錯視絵本（卒業制作）</h2>
+                <a href="sakushi.html"><img class="image opacity" src="images/sakushi_top.png" alt="sakushi"></a>
+                <p>錯視効果を用いた子ども用絵本を作成</p>
+          </div>
+          <div class="item">
+            <h2>ダイアグラム</h2>
+            <a href="diagram.html"><img class="image opacity" src="images/diagram_top.png" alt=""></a>
+            <p>小林一茶の俳句や歴史の資料を基にダイアグラムを作成</p>
+                </div>
+          <div class="item">
+            <h2>水のおもちゃ</h2>
+                <a href="water.html"><img class="image opacity" src="images/water_top.jpg" alt=""></a>
+                <p>水を使ったおもちゃを作成するというテーマで水を使ったぬいぐるみを作成</p>
+          </div>
+          </div>
+    	</section>
 
     </main>
 <footer>Mizuki Nishi Portfolio. All Rights Reserved</footer>
@@ -536,6 +512,25 @@ jQuery(function($){
             ScrollReveal().reveal(".modal_btn", { delay: 200,origin:"left" });
             
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--
+<script>
+$(window).on('load', function() {
+  var show = 12;
+  var num = 6;
+  var contents = '.modal_trigger .modal_btn';
 
+  $(contents + ':nth-child(n+' + (show+1) + ')').addClass('is-hidden');
+
+  $('.more button').on('click', function() {
+    var hiddenItems = $(contents + '.is-hidden');
+    hiddenItems.slice(0, num).removeClass('is-hidden');
+    if (hiddenItems.length <= num) {
+      $('.more').fadeOut();
+    }
+  });
+});
+</script>
+-->
 </body>
 </html>
