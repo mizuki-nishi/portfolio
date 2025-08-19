@@ -20,6 +20,17 @@ main{
 img{
 	vertical-align:top;
 }
+ /* 透明レイヤーが邪魔ならクリックを通す */
+.modal_box, .modal_bg {
+    pointer-events: none;
+}
+
+/* または、ボタンを前面に出す */
+.modal_btn {
+    position: relative;
+}
+
+
 /* --------------------------------
  * h1～h7
  * -------------------------------- */
@@ -411,17 +422,39 @@ dl {
 	grid-template-columns: repeat(auto-fill, 332px);
 	justify-content: center;
 	grid-row-gap: 10px;
-	grid-column-gap: 20px;  
+	grid-column-gap: 20px;
 	max-width: 1036px;
 	margin: 0 auto;
-}
-.modal_btn {
+  }
+  
+  .modal_btn {
 	background: #fff;
 	padding: 1em;
-	border: solid #f7f7f7 1px ;
-	box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15);
+	border: solid #f7f7f7 1px;
+	box-shadow: 0 6px 4px -4px rgba(0,0,0,0.15);
 	margin: 5px;
-}
+  }
+  
+  .is-hidden {
+	display: none; /* これがないと非表示にならない */
+  }
+  
+  .more {
+	text-align: center;
+	margin-top: 20px;
+  }
+  
+  .more button {
+	background-color: #5C6BC0;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	line-height: 40px;
+	width: 160px;
+	border-radius: 20px;
+  }
+  
 
 .modal_box {
 	display: none;
@@ -603,6 +636,13 @@ dl {
   .completes{
 	margin-top: 90px;
   }
+/* --------------------------------
+ * #musabi
+ * -------------------------------- */
+#musabi{
+	padding: 40px 0;
+	background: #f6e8e8;
+}
 /* --------------------------------
  * footer
  * -------------------------------- */
