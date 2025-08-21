@@ -41,6 +41,19 @@ jQuery(function($){
 
 });
 	</script>
+<script>
+  // 設定するパスワード
+  const PASSWORD = "2025";
+
+  // ページ読み込み時に確認
+  window.onload = function() {
+    let userPass = prompt("ポートフォリオ閲覧にはパスワードが必要です:");
+    if (userPass !== PASSWORD) {
+      alert("パスワードが違います。閲覧できません。");
+      document.body.innerHTML = "<h2>パスワードが違います。</h2>";
+    }
+  }
+</script>
 </head>
 
 <body>
