@@ -10,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('jsHeader');
 
   if (menuBtn && header) {
-    menuBtn.addEventListener('click', () => {
-      const isOpen = header.classList.toggle('is-open');
-      menuBtn.setAttribute('aria-expanded', String(isOpen));
-    });
+  menuBtn.addEventListener('click', () => {
+  const isOpen = header.classList.toggle('is-open');
+  menuBtn.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('is-menu-open', isOpen); // ← 追加
+  });
   }
 
   initWorkSliders();
