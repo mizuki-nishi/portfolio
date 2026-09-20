@@ -8,13 +8,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('jsMenuBtn');
   const header = document.getElementById('jsHeader');
+  const menuPanel = document.getElementById('jsMenuPanel');
 
   if (menuBtn && header) {
-  menuBtn.addEventListener('click', () => {
-  const isOpen = header.classList.toggle('is-open');
-  menuBtn.setAttribute('aria-expanded', String(isOpen));
-  document.body.classList.toggle('is-menu-open', isOpen); // ← 追加
-  });
+    menuBtn.addEventListener('click', () => {
+      const isOpen = header.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  // メニュー内のリンクをクリックしたら自動で閉じる。
+  // 同一ページ内アンカー（例: index.html#skill）は、閉じないと
+  // 裏のページが見えず遷移したことが分かりにくいための対応。
+  if (menuPanel && menuBtn && header) {
+    menuPanel.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        header.classList.remove('is-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   initWorkSliders();
