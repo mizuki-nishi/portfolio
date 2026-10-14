@@ -87,6 +87,12 @@ button {
   position: relative;
 }
 
+.u-grid-bg {
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, transparent 13px, #ededed 13px), linear-gradient(to bottom, transparent 13px, #ededed 13px);
+  background-size: 15px 15px;
+}
+
 .p-header {
   position: fixed;
   top: 0;
@@ -228,7 +234,7 @@ button {
   transition: opacity 0.2s ease;
 }
 .p-header__menu-title::before {
-  content: "●";
+  content: "■";
   font-size: 1.2rem;
   line-height: 1;
 }
@@ -712,10 +718,22 @@ button {
   }
 }
 .p-skill__en {
+  display: flex;
+  align-items: baseline;
+  gap: 0.22em;
+}
+.p-skill__en::before {
+  content: "■";
+  flex: 0 0 auto;
+  font-size: 0.33em;
+  line-height: 1;
+  color: #eb4e4e;
+}
+.p-skill__en {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 6.4rem;
-  color: #eb4e4e;
+  color: #141414;
   margin-bottom: 8px;
 }
 @media (max-width: 1024px) {
@@ -928,9 +946,22 @@ button {
   }
 }
 .p-work__heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.22em;
+}
+.p-work__heading::before {
+  content: "■";
+  flex: 0 0 auto;
+  font-size: 0.33em;
+  line-height: 1;
+  color: currentColor;
+}
+.p-work__heading {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 6.4rem;
+  color: #141414;
   margin-bottom: 10px;
 }
 @media (max-width: 1024px) {
@@ -960,22 +991,22 @@ button {
   height: 1px;
   background: currentColor;
 }
-.p-work--web .p-work__heading {
+.p-work--web .p-work__heading::before {
   color: #e78414;
 }
-.p-work--graphic .p-work__heading {
+.p-work--graphic .p-work__heading::before {
   color: #ddca00;
 }
-.p-work--banner .p-work__heading {
+.p-work--banner .p-work__heading::before {
   color: #39c800;
 }
-.p-work--asahi .p-work__heading {
+.p-work--asahi .p-work__heading::before {
   color: #10a5db;
 }
-.p-work--apa .p-work__heading {
+.p-work--apa .p-work__heading::before {
   color: #8a55b2;
 }
-.p-work--musabi .p-work__heading {
+.p-work--musabi .p-work__heading::before {
   color: #e32775;
 }
 .p-work__head {
