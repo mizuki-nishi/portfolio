@@ -721,6 +721,11 @@ button {
   display: flex;
   align-items: baseline;
   gap: 0.22em;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 6.4rem;
+  color: #141414;
+  margin-bottom: 8px;
 }
 .p-skill__en::before {
   content: "■";
@@ -728,13 +733,6 @@ button {
   font-size: 0.33em;
   line-height: 1;
   color: #eb4e4e;
-}
-.p-skill__en {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 6.4rem;
-  color: #141414;
-  margin-bottom: 8px;
 }
 @media (max-width: 1024px) {
   .p-skill__en {
@@ -949,20 +947,17 @@ button {
   display: flex;
   align-items: baseline;
   gap: 0.22em;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 6.4rem;
+  color: #141414;
+  margin-bottom: 10px;
 }
 .p-work__heading::before {
   content: "■";
   flex: 0 0 auto;
   font-size: 0.33em;
   line-height: 1;
-  color: currentColor;
-}
-.p-work__heading {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 6.4rem;
-  color: #141414;
-  margin-bottom: 10px;
 }
 @media (max-width: 1024px) {
   .p-work__heading {
