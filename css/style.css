@@ -89,7 +89,7 @@ button {
 
 .u-grid-bg {
   background-color: #ffffff;
-  background-image: linear-gradient(to right, transparent 13px, #ededed 13px), linear-gradient(to bottom, transparent 13px, #ededed 13px);
+  background-image: linear-gradient(to right, transparent 14px, #ededed 14px), linear-gradient(to bottom, transparent 14px, #ededed 14px);
   background-size: 15px 15px;
 }
 
